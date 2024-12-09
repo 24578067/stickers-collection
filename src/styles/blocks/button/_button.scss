@@ -1,0 +1,23 @@
+.basic-button {
+    display: block;
+    max-width: 320px;
+    text-decoration: none;
+    color: var(--black-color);
+    font-weight: bold;
+    padding: 25px 75px;
+    background: var(--blue-color);
+    border-radius: 40px;
+
+    &:hover {
+        background: linear-gradient(180deg, rgba(70,244,219,1) 41%, rgba(87,210,114,1) 100%);
+    }
+
+    @include media-down ($lg) {
+        padding: 20px 60px;
+    }
+
+    @include media-down ($md) {
+        padding: 15px 25px;
+        font-size: $lgFontSize;
+    }
+}

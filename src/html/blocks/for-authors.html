@@ -1,0 +1,51 @@
+<section class="for-authors">
+  <div class="container">
+    <div class="left">
+      <div class="left__text">
+        <h2 class="title-2--black">Стать автором</h2>
+        <h3 class="title-3--black">
+          Если ты художник или стремишься им стать — добро пожаловать к нам!
+        </h3>
+        <p>
+          Отправь нам от трёх до пяти своих работ и напиши свой ник в телеграме.
+          Если наши кураторы решат, что нам по пути, то мы обязательно свяжемся
+          с тобой и обговорим условия сотрудничества!
+          <span>Удачи!</span>
+        </p>
+      </div>
+      <div class="left__img">
+        <img src="../../images/authored-by/hands.png" alt="" />
+      </div>
+    </div>
+    <div class="right">
+      <div class="right__img">
+        <img src="../../images/authored-by/hands-laptop.png" alt="" />
+      </div>
+      <form action="index.html" method="post" class="right__form">
+        <div
+          id="attach-file"
+          class="attach-file"
+          action="/upload"
+          method="POST"
+        >
+          <img src="../../images/authored-by/plus.png" alt="" id="plus-icon" />
+          <div>
+            <input
+              type="file"
+              id="file-input"
+              accept="image/png, image/jpeg"
+              multiple
+              required
+            />
+            <label id="file-label" for="file-input">
+              Прикрепить работы (.jpeg / .png)
+            </label>
+          </div>
+          <div id="preview-container"></div>
+        </div>
+        <input type="text" placeholder="@telegram_nickname" required />
+        <input type="submit" value="Отправить" />
+      </form>
+    </div>
+  </div>
+</section>

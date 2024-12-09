@@ -1,0 +1,324 @@
+.auction {
+    margin: 90px 0;
+
+    @include media-down ($md) {
+        margin: 80px 0;
+    }
+}
+
+.auction__title {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    margin-bottom: 32px;
+
+    h2 {
+        @include media-down ($md) {
+            font-size: $h2Mobile;
+        }
+    }
+}
+
+.main__sticker {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+    margin-bottom: 90px;
+
+    .stiker {
+        img {
+            max-width: 460px;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @include media-down($l) {
+        align-items: flex-start;
+    }
+
+    @include media-down($lg) {
+        flex-direction: column;
+        row-gap: 32px;
+        align-items: center;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+
+    &__user {
+        display: flex;
+        column-gap: 15px;
+        align-items: center;
+        padding: 11px 16px;
+        background-color: var(--gray-color);
+        max-width: 235px;
+        border-radius: 23px;
+
+        & .name {
+            font-weight: bold;
+            font-size: $lgFontSize;
+        }
+
+        .user__photo {
+            display: block;
+
+            @include media-down($md) {
+                display: none;
+            }
+        }
+
+        .user__photo--mobile {
+            display: none;
+
+            @include media-down($md) {
+                display: block;
+            }
+        }
+
+        @include media-down($md) {
+            column-gap: 8px;
+        }
+    }
+
+    @include media-down($lg) {
+        align-items: center;
+    }
+
+    @include media-down($md) {
+        align-items: flex-start;
+        row-gap: 16px;
+    }
+}
+
+.sticker-name {
+    font-size: $xllFontSize;
+
+    @include media-down($lg) {
+        text-align: center;
+    }
+
+    @include media-down($md) {
+        font-size: $h2Mobile;
+        text-align: start;
+    }
+}
+
+.price-and-time {
+    display: flex;
+    column-gap: 32px;
+
+    & .price {
+        padding: 32px 57px 32px 32px;
+        background-color: var(--gray-color);
+        border-radius: 40px;
+
+        .stake {
+            font-weight: bold;
+            
+            @include media-down ($md) {
+                font-size: $lgFontSize;
+            }
+        }
+
+         .cost {
+            font-size: $xllFontSize;
+            font-weight: bold;
+            margin-bottom: -5px;
+
+            @include media-down ($md) {
+                font-size: $h2Mobile;
+                margin-bottom: 5px;
+            }
+        }
+
+         .dollars {
+            color: var(--gray-dark-color);
+            font-weight: bold;
+
+            @include media-down ($md) {
+                font-size: $lgFontSize;
+            }
+        }
+
+        @include media-down($l) {
+            max-width: 300px;
+        }
+
+        @include media-down($md) {
+            padding: 16px 28px 16px 16px;
+            border-radius: 18px;
+        }
+    }
+
+    & .time {
+        display: flex;
+        align-items: center;
+        column-gap: 45px;
+        padding: 32px;
+        background-color: var(--black-color);
+        border-radius: 40px;
+
+        & .left {
+
+            .end {
+                font-weight: bold;
+                color: var(--white-color);
+
+                @include media-down($md) {
+                    font-size: $lgFontSize;
+                }
+            }
+
+            .timer {
+                display: flex;
+                column-gap: 25px;
+                text-align: center;
+                color: var(--white-color);
+                font-weight: bold;
+
+                .number {
+                    font-size: $xllFontSize;
+                    margin-bottom: -5px;
+
+                    @include media-down($md) {
+                        font-size: $h2Mobile;
+                    }
+                }
+
+                @include media-down($md) {
+                    font-size: $lgFontSize;
+                }
+
+            }
+        }
+
+        & .right {
+            img {
+                width: 121px;
+                height: auto;
+                
+                @include media-down($md) {
+                    display: none;
+                }
+            }
+        }
+
+        @include media-down($md) {
+            padding: 16px 0 16px 16px;
+            border-radius: 18px;
+        }
+
+
+    }
+
+    @include media-down($l) {
+        flex-direction: column;
+        row-gap: 32px;
+    }
+
+    @include media-down($lg) {
+        align-items: center;
+    }
+
+    @include media-down($md) {
+        align-items: flex-start;
+        row-gap: 16px;
+    }
+}
+
+
+.auction__other-stickers {
+    &__title {
+        margin-bottom: 32px;
+    }
+
+    .swiper {
+        display: none;
+
+        .swiper-wrapper {
+
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        @include media-down($md) {
+            padding-bottom: 50px;
+            display: block;
+            
+        }
+
+        .swiper-pagination {
+            position: absolute;
+            top: 400px;
+        }
+
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            opacity: 1;
+            background-color: var(--gray-color);
+
+            &-active {
+                background-color: var(--blue-color);
+            }
+        }
+    }
+}
+
+.auction__other-stickers__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-bottom: 32px;
+
+    @include media-down($l) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-down($lg) {
+        grid-template-columns: repeat(2, 1fr);
+        // justify-items: center;
+    }
+
+    @include media-down($md) {
+        display: none;
+    }
+}
+
+.auction__other-stickers__btn {
+    
+    a {
+        display: block;
+        width: 330px;
+        text-decoration: none;
+        color: var(--black-color);
+        font-weight: bold;
+        padding: 25px 80px;
+        border: 5px solid var(--blue-color);
+        border-radius: 40px;
+        margin: 0 auto;
+
+        &:hover {
+            background-color: var(--green-color);
+            border: 5px solid var(--green-color);
+        }
+
+        @include media-down($md) {
+            width: 230px;
+            text-align: center;
+            padding: 15px 32px;
+            margin-top: 32px;
+        }
+    }
+}
+
+
+
+
+

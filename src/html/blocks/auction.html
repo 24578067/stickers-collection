@@ -1,0 +1,245 @@
+<section class="auction">
+  <div class="container">
+    <div class="auction__title">
+      <h2 class="title-2--black">Аукцион</h2>
+      <img src="../../images/auction/live.png" alt="" width="135" height="36" />
+    </div>
+
+    <div class="main__sticker">
+      <div class="stiker">
+        <img src="../../images/auction/witcher-3.png" alt="" />
+      </div>
+
+      <div class="info">
+        <div class="info__user">
+          <img
+            src="../../images/users/ellipse-2.png"
+            alt=""
+            width="48"
+            height="48"
+            class="user__photo"
+          />
+          <img
+            src="../../images/users/ellipse-2-mobile.png"
+            alt=""
+            width="24"
+            height="24"
+            class="user__photo--mobile"
+          />
+          <p class="name">Serge_VM222</p>
+        </div>
+
+        <p class="sticker-name">Witcherrr_3 (xml_t5)</p>
+
+        <div class="price-and-time">
+          <div class="price">
+            <p class="stake">Ставка:</p>
+            <p class="cost">0.10 ETH</p>
+            <p class="dollars">$351.24</p>
+          </div>
+
+          <div class="time">
+            <div class="left">
+              <p class="end">Окончание через:</p>
+              <div class="timer">
+                <div class="hour">
+                  <p class="number">01</p>
+                  <p>Час</p>
+                </div>
+                <div class="minute">
+                  <p class="number">48</p>
+                  <p>Мин</p>
+                </div>
+                <div class="second">
+                  <p class="number">47</p>
+                  <p>Сек</p>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <img
+                src="../../images/auction/clock.svg"
+                alt=""
+                width="121"
+                height="121"
+              />
+            </div>
+          </div>
+        </div>
+        @@include('blocks/button/button.html', {text: "Сделать ставку"})
+      </div>
+    </div>
+
+    <div class="auction__other-stickers">
+      <div class="auction__other-stickers__title">
+        <h3 class="title-3--black">Другие аукционы</h3>
+      </div>
+      <div class="auction__other-stickers__content">
+        @@include('blocks/sticker-card/sticker-card.html', {
+          photo_sticker: "../../images/auction/alien.png",
+          photo_user: "../../images/users/ellipse-2-1.png",
+          name_user: "Frank.Nagval",
+          name_sticker: "Alien (green) e_e",
+          price_sticker: "0.02 ETH",
+          time: "03 часа 25 мин 23 сек"
+        })
+
+        @@include('blocks/sticker-card/sticker-card.html', {
+          photo_sticker: "../../images/auction/cobra.png",
+          photo_user: "../../images/users/ellipse-2-2.png",
+          name_user: "CPH_777",
+          name_sticker: "CoBRRRa",
+          price_sticker: "0.5 ETH",
+          time: "15 мин 03 сек"
+        })
+
+        @@include('blocks/sticker-card/sticker-card.html', {
+          photo_sticker: "../../images/auction/diamonds.png",
+          photo_user: "../../images/users/ellipse-2-3.png",
+          name_user: "sUpah_kiLLah",
+          name_sticker: "Diamonds (4)",
+          price_sticker: "0.008 ETH",
+          time: "23 часа 05 мин 08 сек"
+        })
+
+        @@include('blocks/sticker-card/sticker-card.html', {
+          photo_sticker: "../../images/auction/holofobia-2.png",
+          photo_user: "../../images/users/ellipse-2-4.png",
+          name_user: "ttgs",
+          name_sticker: "Holofobia-2",
+          price_sticker: "1.0 ETH",
+          time: "01 час 15 мин 55 сек"
+        })
+
+        @@include('blocks/sticker-card/sticker-card.html', {
+          photo_sticker: "../../images/auction/babyYoda-1.png",
+          photo_user: "../../images/users/ellipse-2-5.png",
+          name_user: "Peppppe22",
+          name_sticker: "Baby Yoda 1",
+          price_sticker: "0.2 ETH",
+          time: "01 час 28 мин 11 сек"
+        })
+
+        @@include('blocks/sticker-card/sticker-card.html', {
+          photo_sticker: "../../images/auction/alien-vs-predator.png",
+          photo_user: "../../images/users/ellipse-2-6.png",
+          name_user: "1300e1440",
+          name_sticker: "alien vs. predator (01)",
+          price_sticker: "0.09 ETH",
+          time: "08 часов 44 мин 43 сек"
+        })
+
+        @@include('blocks/sticker-card/sticker-card.html', {
+          photo_sticker: "../../images/auction/decepticon.png",
+          photo_user: "../../images/users/ellipse-2-7.png",
+          name_user: "Robert_Wward",
+          name_sticker: "IAMDECEPTICON",
+          price_sticker: "0.1 ETH",
+          time: "55 мин 18 сек"
+        })
+
+        @@include('blocks/sticker-card/sticker-card.html', {
+          photo_sticker: "../../images/auction/ghostbusters-1.png",
+          photo_user: "../../images/users/ellipse-2-8.png",
+          name_user: "ttgs",
+          name_sticker: "Ghostbusterrrrrrrs",
+          price_sticker: "0.09 ETH",
+          time: "18 мин 12 сек"
+        })
+      </div>
+
+      <div class="swiper auction__slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              @@include('blocks/sticker-card/sticker-card.html', {
+                photo_sticker: "../../images/auction/alien.png",
+                photo_user: "../../images/users/ellipse-2-1.png",
+                name_user: "Frank.Nagval",
+                name_sticker: "Alien (green) e_e",
+                price_sticker: "0.02 ETH",
+                time: "03 часа 25 мин 23 сек"
+              })
+          </div>
+          <div class="swiper-slide">
+              @@include('blocks/sticker-card/sticker-card.html', {
+                photo_sticker: "../../images/auction/diamonds.png",
+                photo_user: "../../images/users/ellipse-2-3.png",
+                name_user: "sUpah_kiLLah",
+                name_sticker: "Diamonds (4)",
+                price_sticker: "0.008 ETH",
+                time: "23 часа 05 мин 08 сек"
+              })
+          </div>
+          <div class="swiper-slide">
+            @@include('blocks/sticker-card/sticker-card.html', {
+              photo_sticker: "../../images/auction/cobra.png",
+              photo_user: "../../images/users/ellipse-2-2.png",
+              name_user: "CPH_777",
+              name_sticker: "CoBRRRa",
+              price_sticker: "0.5 ETH",
+              time: "15 мин 03 сек"
+            })
+          </div>
+          <div class="swiper-slide">
+            @@include('blocks/sticker-card/sticker-card.html', {
+              photo_sticker: "../../images/auction/holofobia-2.png",
+              photo_user: "../../images/users/ellipse-2-4.png",
+              name_user: "ttgs",
+              name_sticker: "Holofobia-2",
+              price_sticker: "1.0 ETH",
+              time: "01 час 15 мин 55 сек"
+            })
+          </div>   
+          <div class="swiper-slide">
+            @@include('blocks/sticker-card/sticker-card.html', {
+              photo_sticker: "../../images/auction/babyYoda-1.png",
+              photo_user: "../../images/users/ellipse-2-5.png",
+              name_user: "Peppppe22",
+              name_sticker: "Baby Yoda 1",
+              price_sticker: "0.2 ETH",
+              time: "01 час 28 мин 11 сек"
+            })
+          </div>
+
+          <div class="swiper-slide">
+              @@include('blocks/sticker-card/sticker-card.html', {
+                photo_sticker: "../../images/auction/alien-vs-predator.png",
+                photo_user: "../../images/users/ellipse-2-6.png",
+                name_user: "1300e1440",
+                name_sticker: "alien vs. predator (01)",
+                price_sticker: "0.09 ETH",
+                time: "08 часов 44 мин 43 сек"
+              })
+          </div>
+
+          <div class="swiper-slide">
+            @@include('blocks/sticker-card/sticker-card.html', {
+              photo_sticker: "../../images/auction/decepticon.png",
+              photo_user: "../../images/users/ellipse-2-7.png",
+              name_user: "Robert_Wward",
+              name_sticker: "IAMDECEPTICON",
+              price_sticker: "0.1 ETH",
+              time: "55 мин 18 сек"
+            })
+          </div>
+
+          <div class="swiper-slide">
+              @@include('blocks/sticker-card/sticker-card.html', {
+                photo_sticker: "../../images/auction/ghostbusters-1.png",
+                photo_user: "../../images/users/ellipse-2-8.png",
+                name_user: "ttgs",
+                name_sticker: "Ghostbusterrrrrrrs",
+                price_sticker: "0.09 ETH",
+                time: "18 мин 12 сек"
+              })
+          </div>
+        </div>
+      <div class="swiper-pagination"></div>
+    </div>
+      <div class="auction__other-stickers__btn">
+        <a href="#!">Все аукционы</a>
+      </div>
+      
+    </div>
+  </div>
+</section>

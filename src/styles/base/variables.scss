@@ -1,0 +1,34 @@
+// scss
+
+$md: 480;
+$lg: 786;
+$l: 1024;
+$xl: 1155;
+$xll: 1702;
+$xxl: 1920;
+
+
+$h1FontSize: 70px;
+$h2FontSize: 60px;
+$xllFontSize: 48px;
+$h1Mobile: 33px;
+$h2Mobile: 30px;
+$defFontSize: 20px;
+$xlFontSize: 18px;
+$lgFontSize: 16px;
+$mdFontSize: 12px;
+
+
+
+// css
+
+:root {
+  --black-color: #07060B;
+  --white-color: #fff;
+  --red-color: #D13130;
+  --green-color: #57D272;
+  --gray-color: #EDEDF2;
+  --gray-dark-color: #95959D;
+  --to-top-bg-color: #37373E;
+  --blue-color: #46F4DB;
+}

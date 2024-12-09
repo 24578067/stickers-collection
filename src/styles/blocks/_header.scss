@@ -1,0 +1,300 @@
+.header {
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header__nav--left {
+  display: flex;
+  column-gap: 65px;
+
+  & .logo {
+    display: block;
+
+    @include media-down($lg) {
+      display: none;
+    }
+  }
+
+  & .logo-mobile {
+    display: none;
+
+    @include media-down($lg) {
+      display: block;
+      margin: 20px 0;
+    }
+  }
+
+  & .nav {
+    ul {
+      display: flex;
+      column-gap: 32px;
+
+      li {
+        a {
+          text-decoration: none;
+          color: var(--black-color);
+          font-weight: bold;
+          padding: 5px 10px;
+
+          &:hover {
+            outline: 3px solid var(--green-color);
+          }
+
+          @include media-down($xl) {
+            font-size: $xlFontSize;
+          }
+
+          @include media-down($lg) {
+            font-size: $lgFontSize;
+          }
+        }
+      }
+
+      @include media-down($xl) {
+        column-gap: 15px;
+      }
+
+      @include media-down($lg) {
+        column-gap: 5px;
+      }
+    }
+  }
+
+  @include media-down($lg) {
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  @include media-down($md) {
+    display: none;
+  }
+}
+
+.header__btn {
+  display: block;
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: $lgFontSize;
+  font-weight: bold;
+  padding: 17px 32px;
+  background-color: var(--black-color);
+  border-radius: 77px;
+  margin: 15px 0;
+
+  @include media-down($lg) {
+    display: none;
+  }
+}
+
+.header__wallet {
+  display: none;
+
+  @include media-down($lg) {
+    display: block;
+  }
+
+  @include media-down($md) {
+    display: none;
+  }
+}
+
+.header__nav--mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+
+  & .top {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 10px;
+  }
+
+  & .nav {
+    ul {
+      display: flex;
+      column-gap: 32px;
+
+      li {
+        a {
+          text-decoration: none;
+          color: var(--black-color);
+          font-weight: bold;
+          padding: 5px 10px;
+
+          @include media-down($lg) {
+            font-size: $lgFontSize;
+          }
+
+          @include media-down($md) {
+            padding: 0 10px;
+          }
+        }
+      }
+
+      @include media-down($lg) {
+        column-gap: 5px;
+      }
+
+      @include media-down($md) {
+        justify-content: space-between;
+        column-gap: 0;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+
+  @include media-down($md) {
+    display: block;
+  }
+}
+
+.line {
+  width: 100%;
+  border-top: 1px solid #c4c4c4;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.header__wallet--mobile {
+  display: none;
+
+  @include media-down($md) {
+    display: block;
+  }
+}
+
+.header__content {
+  background-color: var(--black-color);
+  background-image: url("../images/header/stickers.png");
+  background-repeat: no-repeat;
+  background-position: calc(100%) center;
+
+  @include media-down($xll) {
+    background-position: calc(100vw - 550px) center;
+  }
+
+  @include media-down($xl) {
+    background-position: calc(100vw - 400px) center;
+  }
+
+  @include media-down($l) {
+    background-position: calc(100vw - 10px) center;
+  }
+
+  @include media-down($lg) {
+    background-position: calc(100vw - 250px) center;
+  }
+
+  @include media-down($md) {
+    background-position: center bottom;
+    background-image: url("../images/header/stickers-mobile.png");
+    background-size: contain;
+  }
+}
+
+.header__content--text {
+  margin: auto 0;
+
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  h1 {
+    color: var(--white-color);
+    font-size: $h1FontSize;
+    font-family: "Russo One", serif;
+    margin-bottom: 35px;
+
+    @include media-down($l) {
+      font-size: $h2FontSize;
+    }
+    
+    @include media-down($lg) {
+      font-size: $h1Mobile;
+      margin-bottom: 16px;
+    } 
+
+    @include media-down($md) {
+      font-size: $h1Mobile;
+    }
+  }
+
+  @include media-down($l) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+    text-align: center;
+  }
+  
+  @include media-down($lg) {
+    align-items: flex-start;
+    text-align: left;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  @include media-down($md) {
+    padding-bottom: 230px;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+
+  & .button__first {
+    text-decoration: none;
+    color: var(--black-color);
+    padding: 25px 55px;
+    background: linear-gradient(
+      180deg,
+      rgba(70, 244, 219, 1) 41%,
+      rgba(87, 210, 114, 1) 100%
+    );
+    font-weight: bold;
+    border-radius: 40px;
+
+    &:hover {
+      background: #46f4db;
+    }
+
+    @include media-down($lg) {
+      padding: 15px 38px;
+    }
+  }
+
+  & .button__second {
+    text-decoration: none;
+    color: var(--white-color);
+    padding: 20px 50px;
+    background: var(--black-color);
+    font-weight: bold;
+    border-radius: 40px;
+    border: 5px solid rgb(70, 244, 219);
+
+    &:hover {
+      outline: none;
+      background: #46f4db;
+      border: 5px solid #46f4db;
+    }
+
+    @include media-down($lg) {
+      padding: 10px 25px;
+    }
+  }
+
+  @include media-down($lg) {
+    font-size: $lgFontSize;
+  }
+
+  @include media-down($md) {
+    flex-direction: column;
+    align-items: start;
+    row-gap: 16px;
+  }
+}

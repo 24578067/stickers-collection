@@ -1,0 +1,232 @@
+.for-authors {
+    padding: 90px 0;
+
+    .container {
+        display: flex;
+        column-gap: 32px;
+
+        .left {
+            &__text {
+                display: flex;
+                flex-direction: column;
+                row-gap: 16px;
+                margin-bottom: 32px;
+                max-width: 624px;
+
+                h3 {
+                    @include media-down($lg) {
+                        display: none;
+                    }
+                }
+
+                p {
+                    span {
+                        font-weight: bold;
+
+                        
+                    }
+                }
+
+                @include media-down($l) {
+                    max-width: 90%;
+                }
+
+                @include media-down($lg) {
+                    max-width: 100%;
+                }
+            }
+
+            &__img {
+                display: block;
+
+                @include media-down($l) {
+                    display: none;
+                }
+
+                @include media-down($lg) {
+                    display: block;
+                    margin-bottom: 32px;
+                }
+            }
+        }
+
+        .right {
+
+            &__img {
+                display: none;
+
+                @include media-down($l) {
+                    display: block;
+                }
+
+                @include media-down($lg) {
+                    display: none;
+                }
+            }
+            
+
+            form {
+                display: flex;
+                flex-direction: column;
+                row-gap: 32px;
+    
+                input[type="text"] {
+                    background-color: var(--gray-color);
+                    color: var(--gray-dark-color);
+                    padding: 25px 32px;
+                    border-radius: 40px;
+                    border: none;
+
+                    &::placeholder {
+                        color: var(--gray-dark-color);
+
+                        @include media-down($lg) {
+                            font-size: $lgFontSize;
+                        }
+                    }
+
+                    &:focus {
+                        outline: 2px solid var(--gray-dark-color);
+                    }
+                }  
+
+                input[type="submit"] {
+                    display: block;
+                    width: 320px;
+                    color: var(--black-color);
+                    font-weight: bold;
+                    padding: 25px 75px;
+                    background: var(--blue-color);
+                    border-radius: 40px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: linear-gradient(180deg, rgba(70,244,219,1) 41%, rgba(87,210,114,1) 100%);
+                    }
+
+                    @include media-down($md) {
+                        width: 200px;
+                        padding: 15px 25px;
+                    }
+                } 
+
+                .attach-file {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 624px;
+                    height: 342px;
+                    background-color: var(--gray-color);
+                    border-radius: 40px;
+                    cursor: pointer;
+                    position: relative;
+                    overflow: auto;
+
+                    #plus-icon {
+                        display: block; /* Делаем изображение блочным элементом */
+                    }
+                    
+
+                    &.dragover {
+                        background-color: #fafafa;
+                        outline-offset: -17px;
+                    }
+
+                    img {
+                        margin-bottom: 16px;
+                        user-select: none;
+
+                        @include media-down($lg) {
+                            width: 60px;
+                            height: 60px;
+                        }
+                    }
+
+                    div {
+                        position: relative;
+                        z-index: 10;
+                        label {
+                            color: var(--gray-dark-color);
+
+                            @include media-down($lg) {
+                                font-size: $lgFontSize;
+                            }
+                        }
+                    }
+
+                    input[type=file] {
+                        width: 0.1px;
+                        height: 0.1px;
+                        opacity: 0;
+                        position: absolute;
+                        z-index: -10;
+
+                        &:focus + label {
+                            outline: var(--gray-dark-color) auto 1px;
+                       }
+                    }
+
+                    #preview-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        padding: 20px;
+
+                        position: absolute; /* Делаем preview-container абсолютным */
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 10;
+                      }
+                      
+                      .preview-image {
+                        
+                        width: 250px; 
+                        height: auto;
+                        object-fit: cover; 
+                        border-radius: 10px;
+                      }
+
+                   @include media-down($xl) {
+                        width: 498px;
+                    }
+
+                    @include media-down($l) {
+                        width: 400px;
+                    }
+
+                    @include media-down($lg) {
+                        width: 100%;
+                        height: 250px;
+                    }
+                }
+
+                @include media-down($lg) {
+                    row-gap: 16px;
+                }
+            }
+
+            @include media-down($l) {
+                display: flex;
+                column-gap: 64px;
+            }
+
+            @include media-down($lg) {
+                display: block;
+                
+            }
+        }
+
+        @include media-down($l) {
+            flex-direction: column;
+        }
+    }
+
+    @include media-down($lg) {
+        padding: 80px 0;
+    }
+}

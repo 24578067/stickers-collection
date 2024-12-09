@@ -1,0 +1,53 @@
+body {
+    font-family: "Montserrat", serif;
+    font-size: $defFontSize;   
+    color: var(--black-color);
+}
+
+.container {
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.title-2--black {
+    font-family: "Russo One", serif;
+    font-size: $h2FontSize;
+    color: var(--black-color);
+
+    @include media-down($lg) {
+        font-size: $xllFontSize;
+    }
+
+    @include media-down($md) {
+        font-size: $h2Mobile;
+    }
+}
+
+.title-2--white {
+    font-family: "Russo One", serif;
+    font-size: $h2FontSize;
+    color: var(--white-color);
+
+    @include media-down($lg) {
+        font-size: $xllFontSize;
+    }
+
+    @include media-down($md) {
+        font-size: $h2Mobile;
+    }
+}
+
+.title-3--black {
+    font-family: "Russo One", serif;
+    font-size: $defFontSize;
+    color: var(--black-color);
+}
+
+.title-3--white {
+    font-family: "Russo One", serif;
+    font-size: $defFontSize;
+    color: var(--white-color);
+}

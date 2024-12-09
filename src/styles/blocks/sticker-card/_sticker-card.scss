@@ -1,0 +1,78 @@
+.sticker-card {
+    max-width: 296px;
+
+    &__img {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        background-color: var(--gray-color);
+        border-radius: 40px 40px 0 0;
+        height: 178px;
+        
+        picture {
+            width: 100%;
+            height: 100%;
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+
+            @include media-down($md) {
+                width: 270px;
+            }
+        }
+    }
+
+    &__desc {
+        padding: 16px 20px 32px 16px;
+        background-color: var(--black-color);
+        border-radius: 0 0 40px 40px;
+
+        word-wrap: break-word;
+        word-break: break-all;
+
+        .user {
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+            margin-bottom: 16px;
+
+            a {
+                font-size: $lgFontSize;
+                color: var(--white-color);
+                font-weight: bold;
+                text-decoration: none;
+            }
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            row-gap: 12px;
+
+            .name {
+                color: var(--white-color);
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            .price {
+                color: var(--blue-color);
+                font-weight: bold;
+            }
+
+            .time {
+                color: var(--gray-dark-color);
+                font-weight: bold;
+            }
+
+            @include media-down($lg) {
+                align-items: start;
+            }
+        }
+    }
+
+    
+}
